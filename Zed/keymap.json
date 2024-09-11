@@ -1,0 +1,48 @@
+// Zed keymap
+//
+// For information on binding keys, see the Zed
+// documentation: https://zed.dev/docs/key-bindings
+//
+// To see the default key bindings run `zed: open default keymap`
+// from the command palette.
+[
+  {
+    "context": "Workspace",
+    "bindings": {
+      // "shift shift": "file_finder::Toggle"
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      // "j k": ["workspace::SendKeystrokes", "escape"]
+    }
+  },
+  {
+    "context": "Workspace",
+    "bindings": {
+      "cmd-t": ["task::Spawn", { "task_name": "Run Pytest" }]
+    }
+  },
+  {
+    "context": "Editor",
+    "bindings": {
+      "cmd-enter": ["task::Spawn", { "task_name": "Python: Execute Selection" }]
+    }
+  },
+  {
+    // "context": "Workspace",
+    "bindings": {
+      "cmd-shift-j": "terminal_panel::ToggleFocus",
+      "ctrl-shift-q": "editor::CopyRelativePath",
+      "ctrl-n": [
+        "workspace::SendKeystrokes",
+        "ctrl-shift-q cmd-shift-j cmd cmd cmd python3 space cmd-v enter cmd cmd cmd-shift-j"
+      ],
+      // "shift-alt-down": "editor::DuplicateLine",
+      "shift-alt-up": ["workspace::SendKeystrokes", "shift-alt-down up"],
+      "cmd-r": "workspace::ToggleRightDock",
+      "cmd-shift-r": ["workspace::SendKeystrokes", "cmd-r cmd-> enter"]
+    }
+  }
+]

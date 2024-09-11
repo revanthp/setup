@@ -1,0 +1,112 @@
+{
+    "gitlens.plusFeatures.enabled": false,
+    "workbench.colorTheme": "GitHub Dark Default",
+    "workbench.editor.empty.hint": "hidden",
+    "editor.inlineSuggest.enabled": true,
+    "editor.suggestSelection": "first",
+    "editor.minimap.enabled": false,
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "[json]": {
+        "editor.defaultFormatter": "esbenp.prettier-vscode"
+    },
+    "[jsonc]": {
+        "editor.defaultFormatter": "vscode.json-language-features"
+    },
+    "terminal.integrated.inheritEnv": false,
+    "terminal.integrated.enableMultiLinePasteWarning": "never",
+    "vsintellicode.modify.editor.suggestSelection": "automaticallyOverrodeDefaultValue",
+    "editor.formatOnSave": true,
+    "files.autoSave": "onFocusChange",
+    "python.autoComplete.extraPaths": [],
+    "github.copilot.editor.enableAutoCompletions": true,
+    "github.copilot.enable": {
+        "*": true,
+        "plaintext": false,
+        "markdown": false,
+        "scminput": false,
+        "yaml": false,
+        "python": true
+    },
+    "window.zoomLevel": 1,
+    "git.enableSmartCommit": true,
+    "hediet.vscode-drawio.resizeImages": null,
+    "explorer.confirmDelete": false,
+    "ruff.nativeServer": false,
+    "ruff.organizeImports": true,
+    "ruff.lint.enable": true,
+    "ruff.lint.args": [
+        "${workspaceFolder}/pyproject.toml"
+    ],
+    "ruff.lint.run": "onSave",
+    "ruff.format.args": [
+        "${workspaceFolder}/pyproject.toml"
+    ],
+    "ruff.showNotifications": "always",
+    "[python]": {
+        "editor.defaultFormatter": "charliermarsh.ruff",
+        "editor.formatOnSave": true,
+        "editor.codeActionsOnSave": {
+            "source.fixAll.ruff": "explicit",
+            "source.organizeImports.ruff": "explicit"
+        },
+    },
+    "python.interpreter.infoVisibility": "always",
+    "python.missingPackage.severity": "Warning",
+    "git.autofetch": true,
+    "yaml.schemas": {
+        "file:///Users/rpentya/.vscode/extensions/atlassian.atlascode-3.0.10/resources/schemas/pipelines-schema.json": "bitbucket-pipelines.yml"
+    },
+    "redhat.telemetry.enabled": false,
+    "atlascode.bitbucket.enabled": false,
+    "atlascode.jira.jqlList": [
+        {
+            "id": "5e060238-a104-4855-b290-07f7030bad19",
+            "enabled": true,
+            "name": "My gapinc Issues",
+            "query": "assignee = currentUser() AND resolution = Unresolved AND status NOT IN (\"Done\", \"REJECTED\") ORDER BY priority DESC, lastViewed DESC",
+            "siteId": "ad36211a-b793-4352-9250-80c362368120",
+            "monitor": true
+        }
+    ],
+    "atlascode.jira.statusbar.showUser": false,
+    "atlascode.jira.statusbar.showProduct": true,
+    "atlascode.jira.statusbar.showLogin": true,
+    "explorer.confirmDragAndDrop": false,
+    "workbench.startupEditor": "none",
+    "todo-tree.general.tags": [
+        "TODO",
+        "FIXME",
+        "agenda:",
+        "ambition:",
+        "CHECK",
+        "WAITING"
+    ],
+    "todo-tree.highlights.customHighlight": {
+        "agenda:": {
+            "icon": "list-unordered",
+            "foreground": "#FFFF00"
+        },
+        "ambition:": {
+            "icon": "rocket",
+            "foreground": "#00FF00"
+        },
+        "#A": {
+            "icon": "alert",
+            "foreground": "#FF0000"
+        },
+        "#B": {
+            "icon": "alert",
+            "foreground": "#FFA500"
+        },
+        "#C": {
+            "icon": "alert",
+            "foreground": "#FFFF00"
+        }
+    },
+    "task.allowAutomaticTasks": "on",
+    "[markdown]": {
+        "editor.defaultFormatter": "yzhang.markdown-all-in-one"
+    },
+    "autoDocstring.docstringFormat": "google",
+    "git.confirmSync": false,
+}

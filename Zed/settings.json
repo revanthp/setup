@@ -1,0 +1,165 @@
+{
+	"base_keymap": "VSCode",
+	"preferred_line_length": 120,
+	"hard_tabs": true,
+	"auto_update": true,
+	"unnecessary_code_fade": 0.5,
+	"ui_font_size": 16,
+	"buffer_font_size": 16,
+	"tabs": {
+		"git_status": true
+	},
+	"extend_comment_on_newline": true,
+	"scrollbar": {
+		"visible": true
+	},
+	"assistant": {
+		"default_model": {
+			"provider": "zed.dev",
+			"model": "claude-3-5-sonnet-20240620"
+		},
+		"version": "2"
+	},
+	"theme": {
+		"mode": "system",
+		"light": "GitHub Dark Default",
+		"dark": "GitHub Dark Default"
+	},
+	"lsp": {
+		"ruff": {
+			"initialization_options": {
+				"command": "ruff",
+				"args": ["--config", "pyproject.toml", "--fix"]
+			}
+		},
+		"mypy": {
+			"initialization_options": {
+				"command": "mypy",
+				"args": ["--config-file", "pyproject.toml", "."]
+			}
+		},
+		"pyright": {
+			"disableOrganizeImports": true,
+			"disableLanguageServices": false,
+			"settings": {
+				"python.analysis": {
+					"diagnosticMode": "workspace",
+					"typeCheckingMode": "strict"
+				},
+				"python": {
+					"pythonPath": "./.venv/bin/python",
+					"analysis": {
+						"ignore": ["*"],
+						"typeCheckingMode": "on",
+						"autoSearchPaths": true,
+						"useLibraryCodeForTypes": true
+					}
+				}
+			}
+		}
+		// "biome": {
+		// 	"initialization_options": {
+		// 		"command": "biome",
+		// 		"args": ["check", "--apply-unsafe"]
+		// 	}
+		// }
+	},
+	"detect_venv": {
+		"on": {
+			"directories": [".venv", "venv"],
+			"activate_script": "default"
+		}
+	},
+	"terminal": {
+		"working_directory": "current_project_directory",
+		"dock": "right",
+		"detect_venv": {
+			"on": {
+				"directories": [".venv"],
+				"activate_script": "default"
+			}
+		}
+	},
+	"python.pythonPath": "$(poetry env info --path)/bin/python",
+	"languages": {
+		"Python": {
+			"code_actions_on_format": {
+				"source.organizeImports.ruff": true,
+				"source.fixAll.ruff": true
+			},
+			"language_servers": ["ruff", "pyright"],
+			"pythonPath": "$(poetry env info --path)/bin/python",
+			"python_path": "$(poetry env info --path)/bin/python",
+			"indent_guides": { "enabled": true },
+			"tab_size": 4,
+			"format_on_save": "on",
+			"formatter": {
+				"external": {
+					"command": "ruff",
+					"arguments": [
+						"format",
+						"--select",
+						"I",
+						"--fix",
+						"--exit-zero",
+						"--stdin-filename",
+						"{buffer_path}",
+						"--config",
+						"pyproject.toml",
+						"-"
+					]
+				}
+			}
+		},
+		"Markdown": {
+			"soft_wrap": "preferred_line_length"
+		},
+		"JSON": {
+			"tab_size": 4,
+			"language_servers": ["biome", "!eslint", "!prettier", "..."],
+
+			"formatter": {
+				"external": {
+					"command": "/usr/local/bin/biome",
+					"arguments": ["check", "--write", "--stdin-file-path", "{buffer_path}"]
+				}
+			}
+		},
+		"Plain Text": {
+			"soft_wrap": "preferred_line_length"
+		},
+		"Elixir": {
+			"tab_size": 2
+		},
+		"Go": {
+			"tab_size": 4,
+			"hard_tabs": true
+		},
+		"JavaScript": {
+			"tab_size": 4
+		},
+		"TypeScript": {
+			"tab_size": 4
+		},
+		"TSX": {
+			"tab_size": 4
+		},
+		"YAML": {
+			"tab_size": 4
+		},
+		"Rust": {
+			"hard_tabs": false
+		}
+	},
+	"language_overrides": {
+		"JSON": {
+			"language_servers": ["biome", "!eslint", "!prettier", "..."],
+			"formatter": {
+				"external": {
+					"command": "/usr/local/bin/biome",
+					"arguments": ["check", "--apply-unsafe", "--stdin-file-path={buffer_path}"]
+				}
+			}
+		}
+	}
+}

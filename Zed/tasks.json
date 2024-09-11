@@ -1,0 +1,13 @@
+// Static tasks configuration.
+[
+  {
+    "label": "Run Pytest",
+    "command": "./.venv/bin/python -m pytest $ZED_FILE",
+    "tags": ["pytest"]
+  },
+  {
+    "label": "Python: Execute Selection",
+    "command": "./.venv/bin/python3",
+    "args": ["-c", "${ZED_SELECTED_TEXT}"]
+  }
+]
